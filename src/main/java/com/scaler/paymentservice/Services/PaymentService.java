@@ -11,6 +11,9 @@ public class PaymentService {
     }
 
     public String initiatePayment() {
+
+        // Make a call to Order service before below line is executed.
+
         return paymentGatewayChooserStrategy
                 .getBestPaymentGateway()
                 .generateLink();
